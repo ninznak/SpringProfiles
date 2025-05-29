@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пиксельный мир</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Courier New', monospace;
+        }
+
+        body {
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        /* Шапка (чердак) */
+        header {
+            background-color: #222;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2rem;
+        }
+
+        /* Тело страницы */
+        main {
+            padding: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .pixel-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .pixel-image {
+            width: 150px;
+            height: 150px;
+            image-rendering: pixelated;
+            border: 3px solid #333;
+            transition: transform 0.3s;
+        }
+
+        .pixel-image:hover {
+            transform: scale(1.1);
+        }
+
+        .login-form {
+            background-color: #fff;
+            border: 3px solid #333;
+            padding: 20px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .login-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #333;
+            font-size: 1rem;
+        }
+
+        .login-btn {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .login-btn:hover {
+            background-color: #555;
+        }
+
+        /* Подвал */
+        footer {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<!-- Шапка (чердак) -->
+<header>
+    <h1>Добро пожаловать в пиксельный мир!</h1>
+</header>
+
+<!-- Тело страницы -->
+<main>
+    <!-- Галерея пиксельных картинок -->
+    <div class="pixel-gallery">
+        <img src="px1.PNG" alt="Пиксель 1" class="pixel-image">
+        <img src="https://placehold.co/150x150/555/fff?text=Pixel+Art+Popo" alt="Пиксель 2" class="pixel-image">
+        <img src="https://placehold.co/150x150/777/fff?text=Pixel+Art+3" alt="Пиксель 3" class="pixel-image">
+        <img src="https://placehold.co/150x150/999/fff?text=Pixel+Art+4" alt="Пиксель 4" class="pixel-image">
+    </div>
+
+    <!-- Форма входа -->
+    <div class="login-form">
+        <h2>Вход в аккаунт</h2>
+        <form action="/login" method="POST">
+            <div class="form-group">
+                <label for="username">Логин:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="login-btn">Войти</button>
+        </form>
+    </div>
+</main>
+
+<!-- Подвал -->
+<footer>
+    <p>&copy; 2024 Пиксельный мир. Все права защищены.</p>
+</footer>
+</body>
+</html>
