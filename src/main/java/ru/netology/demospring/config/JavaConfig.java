@@ -1,8 +1,11 @@
-package ru.netology.demospring;
+package ru.netology.demospring.config;
 
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import ru.netology.demospring.model.DevProfile;
+import ru.netology.demospring.model.ProductionProfile;
+import ru.netology.demospring.model.SystemProfile;
 
 @Configuration
 public class JavaConfig {
